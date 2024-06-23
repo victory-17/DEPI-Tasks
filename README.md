@@ -7,8 +7,8 @@
 
 #### **Task 1**
 
-Create a simple landing page for a bakery website using HTML and CSS.
+▶ Create a simple landing page for a bakery website using HTML and CSS.
 
 #### **Task 2**
 
-Create a responsive landing page for a portfolio website in HTML and CSS.
+▶ Create a responsive landing page for a portfolio website in HTML and CSS.
