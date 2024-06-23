@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bakery website</title>
+        <meta name="description" content="Bakery">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&family=Alegreya:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container">
+            <a class="logo navbar-brand" href="#">
+                <img class="w-100" src="img/bakery-color.png" alt="logo" id="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse in" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item fw-600">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item fw-600">
+                    <a class="nav-link" href="#about">about</a>
+                </li>
+                <li class="nav-item fw-600">
+                    <a class="nav-link" href="#ouroffer">Our Offer</a>
+                </li>
+                <li class="nav-item fw-600">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item fw-600">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="home intil-background vh-100 d-flex justify-content-center align-items-center" id="home">
+            <div class="home-content text-center text-white-50">
+                <p class="fs-3 mb-5">Welcome to</p>
+                <h1 class="text-white display-1">Family Bakery</h1>
+                <p class="fs-4 mb-3">
+                    We're the biggest, best equipped and most advanced Bakery in the greater Los Angeles area.
+                </p>
+                <div>
+                    <a href="#gallery">
+                        <button class="bg-main learn-more rounded text-white">
+                            Learn More
+                        </button>
+                    </a>
+                    <a href="#contact">
+                        <button class="contact-us bg-transparent rounded text-white">
+                            Contact us
+                        </button> 
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="container py-5" id="about">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img class="w-100" src="img/alexandru-stavrica-170390-800x760.jpg" alt="about section photo" />  
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                        <h2 class="heading-color fs-1 mb-4">Who We Are?</h2> 
+                        <p >We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-check fa-2x me-3 fa-fw color-main"></i>
+                                <p  class="mb-0">We care about environment.</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-users fa-2x me-3 fa-fw color-main"></i>
+                                <p class="mb-0">We are trusted by hundreds of clients.</p></li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-heart fa-2x me-3 fa-fw color-main"></i>
+                                <p  class="mb-0">Social media loves us!</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-list-check fa-2x me-3 fa-fw color-main"></i>
+                                <p class="mb-0">This list is super easy to create.</p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our offer -->
+        <section class="bg-light py-5" id="ouroffer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="heading-color fs-1 mb-4">Our Location</h2> 
+                        <p>
+                            We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better.
+                        </p>
+                        <p>
+                            Story on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better.
+                        </p>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <img class="w-100" src="img/full-2-800x640.jpg" alt="location section photo">  
+                    </div>
+                </div>        
+            </div>
+        </section>
+
+        <!-- Gallery *FLEX BOX HERE* -->
+        <section class="py-5 container" id="gallery">
+            <h2 class="heading-color fs-1 my-4 text-center">Our Baking</h2>
+            <div class="show-flex">
+                <div class="flex-item">
+                    <img src="img/photo1.jpg" alt="gallery photo 1">
+                    <h4 class="my-3">Superior Breads</h4>
+                    <p>
+                        Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere
+                    </p>
+                </div>
+                <div class="flex-item">
+                    <img src="img/photo2.jpg" alt="gallery photo 2">
+                    <h4 class="my-3">Bagels</h4>
+                    <p >
+                        Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere
+                    </p>
+                </div>
+                <div class="flex-item">
+                    <img src="img/photo3.jpg" alt="gallery photo 3">
+                    <h4 class="my-3">Cookies</h4>
+                    <p>
+                        Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere
+                    </p>
+                </div>
+            </div> 
+        </section> 
+
+        <!-- Contact -->
+        <section class="bg-light py-5" id="contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                    <h2 class="heading-color fs-1 mb-4">Contact Information</h2>
+                    <p class="mb-3"> 
+                        I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    </p>
+
+                    <p >Our contact details:</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3"><i class="fa-solid fa-location-dot fa-2x me-3 fa-fw color-main"></i><p class="mb-0">Manchester St 123-78B, Random 713, UK</p></li>
+                        <li class="d-flex align-items-center mb-3"><i class="fa-solid fa-phone fa-2x me-3 fa-fw color-main"></i><p class="mb-0">+46 123 456 789</p></li>
+                        <li class="d-flex align-items-center mb-3"><i class="fa-solid fa-headphones-simple fa-2x me-3 fa-fw color-main"></i><p class="mb-0">+37 431 456 789</p></li>
+                        <li class="d-flex align-items-center mb-3"><i class="fa-solid fa-paper-plane fa-2x me-3 fa-fw color-main"></i><p class="mb-0">hello@sitename.com</p></li>
+                    </ul>  
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.736043506931!2d31.235710450000003!3d30.044429649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c623362e7d%3A0xede7c66693c5f18e!2sTahrir%20Square%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1714905594713!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="bg-sec py-5 text-white-50 text-center text-md-start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white my-3">About Us</h4>
+                        <p >I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur. I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.</p>
+                        <p >We are the champions! We are the most amazing theme of all time, yeah.</p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white my-3">Why We Are Special?</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Our magical recipe.
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Our magical recipe.
+                                </p>
+                            
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    We are trusted by hundreds of clients.
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Social media loves us!
+                                </p>
+                            
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    This list is super easy to create.
+                                </p>
+                            
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white my-3">Opening Hours</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Monday 10AM - 9PM
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Tuesday 10AM - 9PM
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Wednesday 10AM - 9PM
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Thursday 10AM - 10PM
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Friday 10AM - 10PM
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 custom-border">
+                                <i class="fa-solid fa-chevron-right fa me-2 fa-fw"></i>
+                                <p class="mb-0">
+                                    Weekends 10AM - 11PM
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white my-3">Contact Details</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-location-dot fa me-2 fa-fw fa-2x"></i>
+                                <a href="#" class="hover-white text-white-50">
+                                    Manchester Road 123-78B, Silictown 7854MD, Great Country
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-phone fa me-2 fa-fw fa-2x"></i>
+                                <a href="#" class="hover-white text-white-50">
+                                    +46 123 456 789
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-at fa me-2 fa-fw fa-2x"></i>
+                                <a href="#" class="hover-white text-white-50">
+                                    Friday 10AM - 10PM Weekends 10AM - 11PM Contact Details Manchester Road 123-78B, Silictown 7854MD, Great Country +46 123 456 789 hello@sitename.com
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-globe fa me-2 fa-fw fa-2x"></i>
+                                <a href="#" class="hover-white text-white-50">    
+                                    http://www.sitename.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-5 text-center footer">
+            <div>
+            <img  src="img/bakery-light-1.png" alt="logo">
+            </div>
+            <br>
+            <p class="text-white-50">
+                Copyright 2024. All rights reserved.
+            </p>
+            <ul class="social list-unstyled d-flex justify-content-center mt-4">
+                <li class="ms-3" id="f"><i class="fa-brands fa-facebook fa-2x"></i></li>
+                <li class="ms-3" id="l"><i class="fa-brands fa-linkedin fa-2x"></i></li>
+                <li class="ms-3" id="t"><i class="fa-brands fa-twitter fa-2x"></i></li>
+            </ul>  
+            </footer> 
+    </body>
+</html>
