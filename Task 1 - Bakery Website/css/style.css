@@ -19,6 +19,7 @@
 body{
     font-family: var(--primary-font);
     color: var(--gray-1);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .intil-background{
@@ -26,14 +27,17 @@ body{
     background-position: center center;
     background-attachment: fixed;
     position: relative;
+    animation: slideIn 1.5s ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--secondary-font);
+    animation: fadeInUp 1s ease-in-out;
 }
 
 h2:hover {
     color: var(--primary);
+    animation: colorChange 0.5s ease-in-out;
 }
 
 
@@ -63,11 +67,11 @@ h2:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: slideDown 1s ease-in-out;
 }
 
 .navbar .logo{
     width: 12%;
-    /* padding: 25px 0px; */
 }
 
 .navbar .nav-link{
@@ -91,14 +95,17 @@ h2:hover {
 
 .home-content h1{
     font-weight: var(--fw-600);
+    animation: fadeInDown 1s ease-in-out;
 }
 .home-content p{
     line-height: 1.86em;
+    animation: fadeInUp 1s ease-in-out;
 }
 .home button{
     margin-right: 5px;
     padding: 15px 20px;
     cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
 }
 .learn-more{
     border: none;
@@ -161,6 +168,7 @@ h2:hover {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .flex-item{
@@ -173,6 +181,7 @@ h2:hover {
     overflow: hidden;
     transition: all .3s ease-in-out;
     cursor: pointer;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .flex-item:hover{
@@ -202,9 +211,73 @@ h2:hover {
 
 .footer{
     background-color:#353330;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .footer .social li{
     color: var(--primary);
     cursor: pointer;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: var(--secondary);
+    }
+    to {
+        color: var(--primary);
+    }
 }
