@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5 {
     border-radius: 43%;
 }
 
-/*FEEDBACK SECTION SMALL SCREEN*/
+/*FEEDBACK SECTION*/
 
 @media screen and (max-width: 767px) {
     .feedback-box {
@@ -377,8 +377,6 @@ h1, h2, h3, h4, h5 {
         text-align: center;
     }
 }
-
-/*FEEDBACK SECTION MEDIUM SCREEN*/
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
     .feedback-box {
@@ -404,6 +402,16 @@ h1, h2, h3, h4, h5 {
     .input-control-half {
         width: 100%;
     }
+}
+
+
+/* contact us */
+
+.input:focus {
+    border: var(--main-color) 1.5px solid;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: none;
 }
 
 /* FOOTER */
