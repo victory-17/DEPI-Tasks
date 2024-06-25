@@ -32,12 +32,21 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--secondary-font);
 }
 
+h2:hover {
+    color: var(--primary);
+}
+
+
 .bg-main{
     background-color: var(--primary) !important;
 }
 
 .bg-sec{
     background-color: #403d38;
+}
+
+.pos-absolute {
+    position: absolute;
 }
 
 .color-main {
@@ -102,6 +111,84 @@ h1, h2, h3, h4, h5, h6{
     background-color: #fff !important;
     color: var(--secondary) !important;
 }
+
+.animation-shape-parent {
+    width: 100px;
+    height: 50px;
+    bottom: 35px;
+    position: absolute;
+    border-radius: 50rem;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.animation-element {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+    top: 1px;
+    animation-name: animate-to-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animation-element:nth-child(1) {
+    animation-delay: 0s;
+}
+@keyframes animate-to-bottom {
+    0% {
+    opacity: 0;
+    top: 5%;
+    }
+    50% {
+    opacity: 1;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 75%;
+    }
+}
+
+/* gallery */
+.show-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item{
+    text-align: center;
+    flex: 1 1 30%;
+    width: 30%;
+    height: 100%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.flex-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    border: 2.5px solid var(--primary);
+}
+
+.flex-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 /* footer */
 .custom-border{
