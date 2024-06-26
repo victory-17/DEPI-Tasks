@@ -19,7 +19,7 @@
 body{
     font-family: var(--primary-font);
     color: var(--gray-1);
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeInDown 2s ease-in-out;
 }
 
 .intil-background{
@@ -27,7 +27,7 @@ body{
     background-position: center center;
     background-attachment: fixed;
     position: relative;
-    animation: slideIn 1.5s ease-in-out;
+    animation: slideInDown 1.5s ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6{
