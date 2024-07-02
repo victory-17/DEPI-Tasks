@@ -83,6 +83,9 @@ h2:hover{
 .custome-color{
     color: var(--main-color);
 }
+.bg-main-color{
+    background-color: var(--main-color);
+}
 
 /*Navbar Section*/
 .navbar{
@@ -359,7 +362,7 @@ button.carousel-control-next, button.carousel-control-prev{
     color: var(--main-color);
 }
 
-/* Clients Section */
+/* Reviews Section */
 .client-img img{
     width: 110px;
     height: 110px;
@@ -394,6 +397,17 @@ margin-bottom: 20px;
     opacity: .5;
     transition: opacity .6s ease;
 }
+.carousel-indicators .active{
+    opacity: 1;
+    background-color: var(--main-color);
+}
+.carousel-indicators{
+    bottom: -50px;
+}
+.carousel-indicators li{
+    margin: 0 5px;
+}
+
 
 @media screen and (max-width: 767px) {
     .review{
