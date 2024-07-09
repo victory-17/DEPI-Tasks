@@ -1,6 +1,6 @@
 # DEPI-Tasks
 
-> **This repository contains tasks and projects completed as part of the Digital Egypt Pioneers Initiative (DEPI)**
+> This repository contains tasks and projects completed as part of the Digital Egypt Pioneers Initiative (DEPI)**
 
 # Tasks
 
