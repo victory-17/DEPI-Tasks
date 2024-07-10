@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const noDataMessage = document.getElementById('noDataMessage');
     const searchBar = document.getElementById('searchBar');
     const searchFilter = document.getElementById('searchFilter');
-    const themeToggle = document.getElementById('themeToggle');
 
     let products = [];
     let editIndex = null;
