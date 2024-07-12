@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <title>Recipes API</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+      <div class="container">
+      <a class="navbar-brand" href="#">Recipe</a>
+      <i class="fa-solid fa-bars fa-2x text-white-50 translate make-pointer" id="control-menu"></i>
+    </div>
+  </nav>
+
+  <!-- Side Menu -->
+  <div class="menu shadow-lg bg-dark text-white-50 col-md-4 position-fixed" style="left: -100%" id="menu">
+    <ul class="list-unstyled ">
+      
+    </ul>
+  </div>
+
+  <!-- Home Section -->
+  <div class="home vh-100 ">
+    <div class="layer w-100 h-100 d-flex justify-content-center align-items-center flex-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center mx-auto">
+            <h1 class="text-white mb-5">Search for Recipes</h1>
+          </div>
+          <div class="col-sm-12 d-flex justify-content-center">
+            <input type="text" class="form-control px-2 mr-2" placeholder="Enter item name..." id="search-input">
+            <button class="btn btn-success" id="search-button">
+              <i class="fa-solid fa-search fa-2x"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recipes Section -->
+  <div class="recipes container py-5">
+      <div class="row g-4 " id="recipes-container">
+          <!-- Cards will be dynamically added here by the JavaScript code -->
+      </div>
+  </div>
+
+  <!-- Recipe Order Container -->
+  <div class="ricepe-oreder-container d-none justify-content-center align-items-center position-fixed" id="recipe-oreder-container">
+      <div class="ricepeOreder-box bg-white col-md-6 col-sm-8 p-1 rounded-1" id="ricepeOreder-box">
+      
+        <div class="ricepe-img position-relative">
+          <i class="fa-solid fa-close fa-2x position-absolute make-pointer transition" id="close-btn"></i>
+          <img src="" class="w-100" alt="respi img" id="respi-box-img">
+        </div>
+        <div class="content text-dark mt-3" id="info-card" style="display: none;">
+          <h3 class="fs-1" id="respi-title"></h3>
+          <p id="respi-puplesher"></p>
+          <div class="ingredients">
+            <h4 class="fs-2">ingredients:</h4>
+            <ul class="list-unstyled ps-3" id="ingredients-menu">
+            </ul>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start py-3">
+    <div class="footer-image text-center">
+      <img src="images/favicon.png" alt="Centered Image" class="centered-image mb-2">
+    </div>
+
+    <div class="text-black-70 text-center">© 2024 || AbdEl-Rahman Nasr</div>
+  </footer>
+  
+  
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
