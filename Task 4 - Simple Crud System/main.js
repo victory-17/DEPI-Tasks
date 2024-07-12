@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const noDataMessage = document.getElementById('noDataMessage');
     const searchBar = document.getElementById('searchBar');
     const searchFilter = document.getElementById('searchFilter');
+    
 
-    let products = [];
+    let products = JSON.parse(localStorage.getItem('products')) || [];
     let editIndex = null;
 
     const renderTable = () => {
@@ -24,15 +25,43 @@ document.addEventListener("DOMContentLoaded", () => {
             productTable.style.display = 'table';
             products.forEach((product, index) => {
                 const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${product.name}</td>
-                    <td>${product.category}</td>
-                    <td>${product.price}</td>
-                    <td>${product.description}</td>
-                    <td><button class="btn btn-outline-success" onclick="editProduct(${index})"><i class="far fa-edit"></i></button></td>
-                    <td><button class="btn btn-outline-danger" onmouseover="this.classList.remove('btn-outline-danger'); this.classList.add('btn-danger');" onmouseout="this.classList.remove('btn-danger'); this.classList.add('btn-outline-danger');" onclick="deleteProduct(${index})"><i class="far fa-trash-alt"></i></button></td>
-                `;
+                
+                const indexCell = document.createElement('td');
+                indexCell.textContent = index + 1;
+                row.appendChild(indexCell);
+                
+                const nameCell = document.createElement('td');
+                nameCell.textContent = product.name;
+                row.appendChild(nameCell);
+                
+                const categoryCell = document.createElement('td');
+                categoryCell.textContent = product.category;
+                row.appendChild(categoryCell);
+                
+                const priceCell = document.createElement('td');
+                priceCell.textContent = product.price;
+                row.appendChild(priceCell);
+                
+                const descriptionCell = document.createElement('td');
+                descriptionCell.textContent = product.description;
+                row.appendChild(descriptionCell);
+                
+                const editCell = document.createElement('td');
+                const editButton = document.createElement('button');
+                editButton.className = 'btn btn-outline-success';
+                editButton.innerHTML = '<i class="far fa-edit"></i>';
+                editButton.addEventListener('click', () => editProduct(index));
+                editCell.appendChild(editButton);
+                row.appendChild(editCell);
+                
+                const deleteCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'btn btn-outline-danger';
+                deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>';
+                deleteButton.addEventListener('click', () => deleteProduct(index));
+                deleteCell.appendChild(deleteButton);
+                row.appendChild(deleteCell);
+                
                 tbody.appendChild(row);
             });
         }
@@ -78,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             products.push(product);
         }
 
+        localStorage.setItem('products', JSON.stringify(products));
         clearForm();
         renderTable();
     });
@@ -101,15 +131,43 @@ document.addEventListener("DOMContentLoaded", () => {
         tbody.innerHTML = '';
         filteredProducts.forEach((product, index) => {
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${product.name}</td>
-                <td>${product.category}</td>
-                <td>${product.price}</td>
-                <td>${product.description}</td>
-                <td><button class="btn btn-success" onclick="editProduct(${index})"><i class="fas fa-edit"></i></button></td>
-                <td><button class="btn btn-danger" onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i></button></td>
-            `;
+                
+            const indexCell = document.createElement('td');
+            indexCell.textContent = index + 1;
+            row.appendChild(indexCell);
+            
+            const nameCell = document.createElement('td');
+            nameCell.textContent = product.name;
+            row.appendChild(nameCell);
+            
+            const categoryCell = document.createElement('td');
+            categoryCell.textContent = product.category;
+            row.appendChild(categoryCell);
+            
+            const priceCell = document.createElement('td');
+            priceCell.textContent = product.price;
+            row.appendChild(priceCell);
+            
+            const descriptionCell = document.createElement('td');
+            descriptionCell.textContent = product.description;
+            row.appendChild(descriptionCell);
+            
+            const editCell = document.createElement('td');
+            const editButton = document.createElement('button');
+            editButton.className = 'btn btn-success';
+            editButton.innerHTML = '<i class="fas fa-edit"></i>';
+            editButton.addEventListener('click', () => editProduct(index));
+            editCell.appendChild(editButton);
+            row.appendChild(editCell);
+            
+            const deleteCell = document.createElement('td');
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'btn btn-danger';
+            deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+            deleteButton.addEventListener('click', () => deleteProduct(index));
+            deleteCell.appendChild(deleteButton);
+            row.appendChild(deleteCell);
+            
             tbody.appendChild(row);
         });
     });
@@ -133,7 +191,15 @@ document.addEventListener("DOMContentLoaded", () => {
         productPriceInput.value = product.price;
         productDescriptionInput.value = product.description;
         addProductBtn.textContent = 'Update Product';
+        addProductBtn.style.backgroundColor = 'green'; 
         editIndex = index;
+
+        // Change button color to green if text is Update Product
+        if (addProductBtn.textContent === 'Update Product') {
+            setTimeout(() => {
+                addProductBtn.style.backgroundColor = '';
+            }, 2000);
+        }
     };
 
     window.deleteProduct = (index) => {
@@ -148,6 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 products.splice(index, 1);
+                localStorage.setItem('products', JSON.stringify(products));
                 renderTable();
                 Swal.fire(
                     'Deleted!',
