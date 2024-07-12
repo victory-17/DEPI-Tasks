@@ -20,7 +20,7 @@
 
 ### **Task 3**
 
-▶ Create Some user prompts as an application on conditions and loops in JS.
+▶ Create Some user prompts as a practice on conditions and loops in JS.
 
 
 • Technologies used: HTML, JavaScript
