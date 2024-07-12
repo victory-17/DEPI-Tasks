@@ -31,3 +31,10 @@
 
 
 • Technologies used: HTML, CSS, Bootstrap, JavaScript, SweetAlert library.
+
+### **Task 5**
+
+▶ Create an API call that displays food categories without reloading.
+
+
+• Technologies used: HTML, CSS, Bootstrap, JavaScript, API, XMLHttpRequest.
