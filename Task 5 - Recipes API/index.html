@@ -54,16 +54,16 @@
   </div>
 
   <!-- Recipe Order Container -->
-  <div class="ricepe-oreder-container d-none justify-content-center align-items-center position-fixed" id="recipe-oreder-container">
-      <div class="ricepeOreder-box bg-white col-md-6 col-sm-8 p-1 rounded-1" id="ricepeOreder-box">
+<!--   <div class="recipe-order-container d-none justify-content-center align-items-center position-fixed" id="recipe-order-container">
+      <div class="recipeorder-box bg-white col-md-6 col-sm-8 p-1 rounded-1" id="recipeorder-box">
       
-        <div class="ricepe-img position-relative">
+        <div class="recipe-img position-relative">
           <i class="fa-solid fa-close fa-2x position-absolute make-pointer transition" id="close-btn"></i>
-          <img src="" class="w-100" alt="respi img" id="respi-box-img">
+          <img src="" class="w-100" alt="recipe img" id="recipe-box-img">
         </div>
         <div class="content text-dark mt-3" id="info-card" style="display: none;">
-          <h3 class="fs-1" id="respi-title"></h3>
-          <p id="respi-puplesher"></p>
+          <h3 class="fs-1" id="recipe-title"></h3>
+          <p id="recipe-publisher"></p>
           <div class="ingredients">
             <h4 class="fs-2">ingredients:</h4>
             <ul class="list-unstyled ps-3" id="ingredients-menu">
@@ -73,7 +73,40 @@
           
         </div>
       </div>
+  </div> -->
+
+
+
+<!--     <div class="container">
+      <div class="row" id="recipes-container"></div>
+    </div> -->
+
+  <div id="recipe-order-container" class="d-none" >
+      <div id="recipeorder-box" class="recipe-box" style="height: 100%; width:100%">
+
+          <div class="col-sm-12 text-center position-relative">
+            <i class="fa-solid fa-close fa-2x position-absolute make-pointer transition" id="close-btn""></i>
+          </div>
+
+          <div class="item-img mx-3 my-3 d-flex justify-content-center box-size-contain">
+            <img id="recipe-box-img" src="" alt="Recipe Image" class="recipe-box-image card-img-top">
+          </div>
+
+          <div class="mx-3">
+            <h2 id="recipe-title" class="recipe-title"></h2>
+          </div>
+
+          <div class="mx-3">
+            <p id="recipe-publisher" class="recipe-publisher"></p>
+          </div>
+
+          <div class="mx-3 mb-3 d-flex justify-content-center width-100">
+            <ul id="ingredients-menu" class="ingredients-list list-group-item"></ul>
+          </div>
+      </div>
   </div>
+
+
 
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start py-3">
