@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Website</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>  
+
+<!-- Theme Toggler -->
+<!--   <div class="container d-flex position-fixed end-0 switch-container">
+    <label class="switch">
+        <input type="checkbox" id="themeChanger">
+        <span class="slider"></span>
+    </label>
+  </div> -->
+
+<!-- Color Picker -->
+  <div class="color-box position-fixed shadow-sm">
+      <div class="color-options p-3 position-relative">
+          <h3>Pick Main Color</h3>
+          <ul class="list-unstyled d-flex flex-wrap">
+              <li class="w-25 p-2"><div class="w-100 color-option default"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+              <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+          </ul>
+      </div>
+      <div class="color-box-icon position-absolute" id="color-box-switch">
+          <i class="fa fa-solid fa-paint-roller p-2 mr-1 fs-1"></i>
+      </div>
+  </div>
+
+  <!-- Header -->
+    <nav class="border-bottom border-dark py-5">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row">
+          <h1 class="brand me-3 text-white mb-3 mb-md-0 wow bounceInLeft"> <span class="text-danger display-6 fw-bold">M</span>ovies <span class="text-info display-6 fw-bold">N</span>ews</h1>
+          <div class="w-50 position-relative">
+            <input type="text" id="searchInput" class="form-control text-white-50 rounded-pill" placeholder="Search movies...">
+            <i class="fa fa-search position-absolute " id="search-icon"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Carousel -->
+  <section class="container py-5 moviesContainer">
+    <h3 class="main-text wow bounceInUp text-center fs-2 fw-bold" data-wow-delay=".5s" id="categoryTitle">Now Playing</h3>
+    <hr class="border-dark">
+    <div class="row g-4" id="moviesCategory">
+    </div>
+  </section>
+  <hr class="border-dark">
+
+  <!-- Contact Us Section -->
+  <section class="container py-5 " id="contactUs">
+    <h3 class="main-text text-center fs-1 mb-5" data-wow-delay=".5s" id="categoryTitle">Contact Us</h3>
+
+      <form class="row">
+          <div class="col-md-6 m-auto">
+          <div class="mb-3">
+            <input type="text" class="form-control text-white-50" placeholder="Enter your name" id="username">
+            <div id="alertName"></div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control text-white-50" placeholder="Enter your email" id="userEmail"> 
+            <div id="alertEmail"></div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control text-white-50" placeholder="Enter your phone" id="userPhone">    
+            <div id="alertPhone"></div>
+          </div>          
+          <div class="mb-3">
+            <input type="text" class="form-control text-white-50" placeholder="Enter your age" id="userAge"> 
+            <div id="alertAge"></div>
+          </div>
+          <div class="mb-3 position-relative">
+            <input type="password" class="form-control text-white-50" placeholder="Enter your password" id="userPass">  
+            <div id="alertPass"></div>
+            <i class="fa fa-eye" id="showPass"></i>
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control text-white-50" placeholder="Validate your  password" id="userVPass"> 
+            <div id="alertVPass"></div>
+          </div>
+
+          <button id="submitBtn" disabled class="btn bg-main text-white">Submit</button>   
+        </div>
+        
+      </form>
+  </section>
+
+  <!-- Sidebar -->
+  <div id="menu" class="position-fixed custome-bg text-white-50 p-3 d-flex flex-column justify-content-between">
+    <div class="mt-5">
+        <ul class="list-unstyled">
+            <li class="fs-3">
+              <span id="/movie/now_playing">Now Playing</span>
+            </li>
+            <li class="fs-3">
+              <span id="/movie/popular">Popular</span> 
+            </li>
+            <li class="fs-3">
+              <span id="/movie/top_rated">Top Rated</span>
+            </li>
+            <li class=" fs-3">
+                <span id="/trending/all/week">Trending</span>
+            </li>
+            <li class=" fs-3">
+                <span id="/movie/upcoming">Upcoming</span>
+            </li>
+            <li class=" fs-3">
+              <span>
+                <a href="#contactUs" class="text-white-50 text-decoration-none">Contact Us</a>
+              </span> 
+            </li>
+        </ul> 
+    </div>
+    <div class="footer">
+      <div class="mb-3">
+            <i class="fa-brands fa-facebook-f text-white me-2"></i>
+            <i class="fa-brands fa-twitter text-white me-2"></i>
+            <i class="fa-brands fa-instagram text-white"></i>
+      </div>
+      <div class="cobyRight">
+        © AbdEl-Rahman Nasr 2024<br>All Rights Reserved.
+      </div>
+    </div>
+    <div class="openbar bg-white d-flex flex-column justify-content-between align-items-center" id="toggle-btn">
+        <br>
+        <i class="fa-solid fa-bars text-dark " id="control-btn"></i>
+        <div>
+          <i class="fa-solid fa-share-nodes text-dark"></i>
+        </div>
+    </div>
+</div>
+<button class="btn bg-main py-2 px-3 rounded-3" id="btn-up">
+  <i class="fa fa-solid fa-arrow-alt-circle-up fa-2x text-white"></i>
+</button>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
