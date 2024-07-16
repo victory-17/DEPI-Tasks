@@ -38,3 +38,10 @@
 
 
 • Technologies used: HTML, CSS, Bootstrap, JavaScript, API, XMLHttpRequest.
+
+### **Task 6**
+
+▶ Create a website that fetches Movies API and displays them, allows users to search in different languages and countries, and uses different form validations.
+
+
+• Technologies used: HTML, CSS, Bootstrap, JavaScript, jQuery, API fetch.
