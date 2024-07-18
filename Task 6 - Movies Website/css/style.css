@@ -6,7 +6,8 @@
   --heading-color: #333333;
   --color-gray: #bfc1c8;;
   --color-gray-2: #262936;
- 
+  
+
   /* transition */
   --transition: all .5s ease;
   /*Font family*/
@@ -23,10 +24,133 @@ body{
   line-height: 1.8;
 }
 
-/* body.dark-mode {
-    background-color: var(--dark-color);
-    color: var(--text-light-color);
-} */
+/* Theme Toggler */
+.theme-toggler {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggler i {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+/* Light Theme */
+body.light-theme {
+  --main-background-color: #ffffff;
+  --bg-color: #f8f9fa;
+  --heading-color: #000000;
+  --color-gray: #212529;
+  --color-gray-2: #adb5bd;
+  --main-color: #d8006c; /* or another appropriate color for light mode */
+}
+
+body.light-theme .main-text {
+  color: var(--main-color);
+}
+
+body.light-theme .bg-color {
+  background: var(--bg-color);
+}
+
+body.light-theme .form-control {
+  background-color: var(--bg-color);
+  color: var(--color-gray);
+}
+
+body.light-theme .form-control::placeholder {
+  color: var(--color-gray-2);
+}
+
+body.light-theme .movieDetails::after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.light-theme h1, body.light-theme h2, body.light-theme h3, 
+body.light-theme h4, body.light-theme h5, body.light-theme h6 {
+  color: var(--heading-color);
+}
+
+body.light-theme p, body.light-theme span, 
+body.light-theme a, body.light-theme li {
+  color: var(--color-gray);
+}
+
+body.light-theme #menu {
+  background-color: var(--bg-color);
+}
+
+body.light-theme #menu a,
+body.light-theme #menu i {
+  color: var(--color-gray);
+}
+
+body.light-theme #menu a:hover {
+  color: var(--main-color);
+}
+
+body.light-theme .header-title {
+  color: var(--heading-color);
+}
+
+body.light-theme .sidebar {
+  background: var(--bg-color);
+  color: var(--color-gray);
+}
+
+body.light-theme .sidebar a,
+body.light-theme .sidebar i {
+  color: var(--color-gray);
+}
+
+body.light-theme .sidebar a:hover {
+  color: var(--main-color);
+}
+
+body.light-theme .footer {
+  background: var(--bg-color);
+  color: var(--color-gray);
+}
+
+body.light-theme .footer a {
+  color: var(--main-color);
+}
+
+body.light-theme .footer a:hover {
+  color: var(--heading-color);
+}
+
+body.light-theme .contact-us-button {
+  background: var(--main-color);
+  color: var(--main-background-color);
+}
+
+body.light-theme .contact-us-button:hover {
+  background: var(--heading-color);
+  color: var(--main-background-color);
+}
+
+body.light-theme .social-icons i {
+  color: var(--color-gray);
+}
+
+body.light-theme .social-icons i:hover {
+  color: var(--main-color);
+}
+
+body.light-theme .openbar {
+  color: var(--color-gray);
+}
+
+body.light-theme .openbar:hover {
+  color: var(--main-color);
+}
+
+
+
 
 h1, h2, h3, h4, h5{
   font-family: var(--custome-font);
@@ -43,59 +167,6 @@ h1, h2, h3, h4, h5{
 }
 
 
-/*Theme Toggler*/
-/* .switch{
-  position: fixed;
-  right: 20px;
-  top: 20px;
-}
-.switch-container{
-  width: 100vw;
-  z-index: 999999;
-}
-
-.switch {
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: gray;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-} */
 
 
 /*Navbar Section*/

@@ -47,7 +47,7 @@ sidebar.toggleSidebar();
 sidebar.pickColor();
 
 
-// handle search input and display results
+// Handle loading and error cases for each endpoint (fetch initial data, search data)
 $(document).ready(function(){
   console.log( $('#loading'))
   $('#loading').fadeOut(2000)
@@ -59,6 +59,7 @@ const categoryTitle = document.querySelector('#categoryTitle')
 const apiKey = '37a194ab674674d3542bdfa59c52f54f'
 
 let searchTimeout;
+
 
 searchInput.addEventListener('input', function(){
   clearTimeout(searchTimeout);
@@ -81,13 +82,14 @@ searchInput.addEventListener('input', function(){
           );
         }
       } else {
-          console.log('Something went wrong');
-      }
-    }, 500); // delay before sending the request (in milliseconds)
-  } else {
-    categoryTitle.innerHTML = `Now Playing`;
-    getData('/movie/now_playing');
-  }
+          categoryTitle.innerHTML = `<span class="fs-5 text-white">Error fetching results. Please try again later.</span>`;
+          $(moviesCategory).html('');
+        }
+      }, 500); // delay before sending the request (in milliseconds)
+    } else {
+      categoryTitle.innerHTML = `Now Playing`;
+      getData('/movie/now_playing');
+    }
 });
 
 $('#menu li span').click(function(){
@@ -98,15 +100,19 @@ $('#menu li span').click(function(){
 })
 
 const getData = async category => {
-    
-      const res = await fetch(`https://api.themoviedb.org/3${category}?api_key=${apiKey}`)
-      const data = await res.json();
-      if(res.ok){
-        display(data.results)
-      }else{
-          console.log('Sometheng went wrong')
-          displaySlider('', true)
-      }
+  try {
+    const res = await fetch(`https://api.themoviedb.org/3${category}?api_key=${apiKey}`)
+    const data = await res.json();
+    if(res.ok){
+      display(data.results)
+    }else{
+      console.log('Something went wrong');
+      displaySlider('', true);
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    displaySlider('', true);
+  }
 }
 getData('/movie/now_playing');
 
@@ -429,18 +435,25 @@ $('#menu a').click(function(){
 
 
 
-// Theme Changer
-/* document
-  .getElementById("themeChanger")
-  .addEventListener("change", function () {
-    if (this.checked) {
-      document.body.classList.add("dark-mode");
+// Theme toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const themeIcon = document.getElementById('theme-icon');
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+
+  if (currentTheme === 'light') {
+    document.body.classList.add('light-theme');
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+  }
+
+  themeIcon.addEventListener('click', function () {
+    document.body.classList.toggle('light-theme');
+    if (document.body.classList.contains('light-theme')) {
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+      localStorage.setItem('theme', 'light');
     } else {
-      document.body.classList.remove("dark-mode");
+      themeIcon.classList.replace('fa-sun', 'fa-moon');
+      localStorage.setItem('theme', 'dark');
     }
-  }); */
-
-
-
-
+  });
+});
 
