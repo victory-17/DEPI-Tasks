@@ -45,3 +45,10 @@
 
 
 • Technologies used: HTML, CSS, Bootstrap, JavaScript, jQuery, API fetch.
+
+### **Task 7**
+
+▶ Create a simple CRUD System with JS OOP.
+
+
+• Technologies used: HTML, CSS, Bootstrap, JavaScript, SweetAlert library.
