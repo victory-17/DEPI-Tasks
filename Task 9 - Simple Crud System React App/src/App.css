@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form-group{
+  margin-bottom: 10px;
+}
+
+.form-control{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#tabel-body {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+
+.alert{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid red;
+  color: red;
+  background-color: #fce6e6;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.btn-primary{
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.clear-btn:hover{
+  background-color: rgb(252, 32, 32);
+}
